@@ -12,7 +12,7 @@ const Statistics = props => {
   return (
     <section className="statistics-section section">
       <div className="statistics-container container">
-        {Object.keys(props).length > 1 && (
+        {Object.keys(props).includes('title') && (
           <h2 className="title">Upload stats</h2>
         )}
         <ul className="stat-list">{dataToInsert}</ul>
@@ -22,9 +22,10 @@ const Statistics = props => {
 };
 
 Statistics.propTypes = {
-  label: PropTypes.string,
-  percentage: PropTypes.number,
-  id: PropTypes.number,
+  // label: PropTypes.string,
+  // percentage: PropTypes.number,
+  // id: PropTypes.number,
+  stats: PropTypes.array,
 };
 
 export default Statistics;

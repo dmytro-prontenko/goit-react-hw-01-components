@@ -12,7 +12,7 @@ const Statistics = props => {
   return (
     <section className="statistics-section section">
       <div className="statistics-container container">
-        {Object.keys(props).includes('title') && (
+        {props.title && (
           <h2 className="title">Upload stats</h2>
         )}
         <ul className="stat-list">{dataToInsert}</ul>
@@ -22,10 +22,13 @@ const Statistics = props => {
 };
 
 Statistics.propTypes = {
-  // label: PropTypes.string,
-  // percentage: PropTypes.number,
-  // id: PropTypes.number,
-  stats: PropTypes.array,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+      id: PropTypes.string,
+    })
+  ),
 };
 
 export default Statistics;

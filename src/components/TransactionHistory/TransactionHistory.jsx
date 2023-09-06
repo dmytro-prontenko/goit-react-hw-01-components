@@ -4,7 +4,7 @@ const TransactionHistory = props => {
   const dataToInsert = props.items.map(({ id, amount, currency, type }) => {
     return (
       <tr key={id}>
-        <td className='type'>{type}</td>
+        <td className="type">{type}</td>
         <td>{amount}</td>
         <td>{currency}</td>
       </tr>
@@ -30,10 +30,14 @@ const TransactionHistory = props => {
 };
 
 TransactionHistory.propTypes = {
-  // type: PropTypes.string,
-  // amount: PropTypes.number,
-  // currency: PropTypes.number,
-  items:PropTypes.array,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      type: PropTypes.string,
+      amount: PropTypes.string,
+      currency: PropTypes.string,
+    })
+  ),
 };
 
 export default TransactionHistory;

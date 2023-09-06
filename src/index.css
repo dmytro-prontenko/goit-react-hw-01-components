@@ -1,4 +1,8 @@
 @import-normalize; /* bring in normalize.css styles */
+@import url('./components/Profile/profile.css');
+@import url('./components/Statistics/statistics.css');
+@import url('./components/FriendList/friends.css');
+@import url('./components/TransactionHistory/transaction.css');
 
 body {
   margin: 0;
@@ -12,4 +16,23 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebebeb;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 30px auto;
 }

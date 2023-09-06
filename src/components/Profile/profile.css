@@ -1,0 +1,78 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.profile-img {
+  width: 200px;
+  margin-top: 30px;
+}
+
+.profile-info {
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid #787676;
+
+  margin: 30px;
+  width: 400px;
+
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.tag,
+.label,
+.location {
+  color: #787676;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  border-top: 1.5px solid #787676;
+
+  background-color: #c1bcbc;
+}
+
+.stats > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 110px;
+  padding: 20px;
+}
+
+.stats li:not(:first-of-type) {
+  border-left: 1.5px solid #787676;
+}
+
+.quantity {
+  font-weight: bold;
+}
